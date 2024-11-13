@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    const foobar = (text, counter) => {
+        document.write('<ul>');
+        Array.from({length: counter}).forEach(() => {
+            document.write(`<li>${text}</li>`);
+        });
+        document.write('</ul>');
+    }
+
+    foobar('hello', 10);
+
+</script>
+</body>
+</html>
