@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+
+    function sortNums(arrayOfNums, direction) {
+        const sort = arrayOfNums.sort((a, b) => b - a);
+        if (direction === 'ascending') {
+        return sort;
+        }
+        if (direction === 'descending'){
+        return sort.reverse();
+        }
+    }
+
+
+</script>
+</html>
