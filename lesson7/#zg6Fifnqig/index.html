@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+
+	// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+	// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+	// 		За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+	// 		Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+
+	// Створюємо клас Попелюшка.
+	class Cinderella {
+		constructor(name, age, footSize) {
+			this.name = name;
+			this.age = age;
+			this.footSize = footSize;
+		}
+	}
+
+	// Створюємо клас Принц.
+	class Prince {
+		constructor(name, age, foundShoe) {
+			this.name = name;
+			this.age = age;
+			this.foundShoe = foundShoe;
+			this.kozak = 0;
+		}
+	}
+
+	// Створюємо масив з 10 Попелюшок.
+	const cinderellas = [
+		new Cinderella('Iryna', 23, 35),
+		new Cinderella('Maria', 25, 38),
+		new Cinderella('Olena', 19, 34),
+		new Cinderella('Oksana', 20, 33),
+		new Cinderella('Nadia', 30, 37),
+		new Cinderella('Olesya', 31, 36),
+		new Cinderella('Galyna', 18, 39),
+		new Cinderella('Lesya', 19, 32),
+		new Cinderella('Sofia', 22, 31),
+		new Cinderella('Olga', 35, 40),
+	];
+
+	// Створюємо об'єкт Принц.
+	const prince = new Prince('Принц', 35, 36);
+	for (const cinderella of cinderellas) {
+		if (cinderella.footSize === prince.foundShoe) {
+			prince.kozak = cinderella;
+			break;
+		}
+
+	}
+	// if (prince.kozak) {
+	// console.log(`Принц знайшов Попелюшку: ${prince.kozak.name}, вік: ${prince.kozak.age}, розмір ноги: ${prince.kozak.footSize}`);
+	// } else {
+	// 	console.log('Принц не знайшов Попелюшку');
+	// }
+
+	const cinderella = cinderellas.find(cinderella => cinderella.footSize === prince.kozak);
+	console.log(`Принц знайшов Попелюшку: ${prince.kozak.name}, вік: ${prince.kozak.age}, розмір ноги: ${prince.kozak.footSize}`);
+
+
+</script>
+</body>
+</html>
