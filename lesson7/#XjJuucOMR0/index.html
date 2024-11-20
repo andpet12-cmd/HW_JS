@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // #XjJuucOMR0
+    // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+    // створити пустий масив, наповнити його 10 об'єктами new User(....)
+
+    function User(id, name, surname, email, phone) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    const user = new User(1, 'misha', 'petrenko', 'misha@gmail.com', '+380553334422')
+    console.log(user);
+
+
+    let users = [
+        new User(1, 'vasya', 'vasyk', 'vasya@gmail.com', '+380554443322'),
+        new User(2, 'olya', 'olega', 'olya@gmail.com', '+380555552244'),
+        new User(3, 'kolya', 'kolyk', 'kolya@gmail.com', '+380553334433'),
+        new User(4, 'roma', 'romyk', 'roma@gmail.com', '+380557772211'),
+        new User(5, 'galya', 'galyk', 'galya@gmail.com', '+380223601122'),
+        new User(6, 'mila', 'milyk', 'mila@gmail.com', '+380555552200'),
+        new User(7, 'petya', 'petyk', 'petya@gmail.com', '+380564441111'),
+        new User(8, 'igor', 'igoryk', 'igor@gmail.com', '+380443335555'),
+        new User(9, 'taras', 'taraskin', 'taras@gmail.com', '+380441112233'),
+        new User(10, 'ruslan', 'ruslik', 'ruslan@gmail.com', '+380443335599'),
+    ];
+
+    console.log(users);
+
+</script>
+</body>
+</html>

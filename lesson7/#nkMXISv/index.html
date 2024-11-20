@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+    // створити пустий масив, наповнити його 10 об'єктами Client
+
+    function Client(id, name, surname, email, phone, ...products) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.phone = phone;
+        this.order = products;
+    }
+
+    const clients = [
+        new Client(1, 'vasya', 'vasyk', 'vasya@gmail.com', '+380554443322', [{title: 'tv', price: 13000},
+            {title: 'phone', price: 40000}, {title: 'radio', price: 20000}, {title: 'headphone', price: 10000}]),
+        new Client(2, 'olya', 'olega', 'olya@gmail.com', '+380555552244', [{title: 'tv', price: 13000},
+            {title: 'phone', price: 40000}, {title: 'radio', price: 20000}, {title: 'headphone', price: 10000}]),
+        new Client(3, 'kolya', 'kolyk', 'kolya@gmail.com', '+380553334433', [{title: 'tv', price: 13000},
+            {title: 'phone', price: 40000}, {title: 'radio', price: 20000}, {title: 'headphone', price: 10000}]),
+        new Client(4, 'roma', 'romyk', 'roma@gmail.com', '+380557772211', [{title: 'tv', price: 13000},
+            {title: 'phone', price: 40000}, {title: 'radio', price: 20000}, {title: 'headphone', price: 10000}]),
+        new Client(5, 'galya', 'galyk', 'galya@gmail.com', '+380443334455', [{title: 'tv', price: 13000},
+            {title: 'phone', price: 40000}, {title: 'radio', price: 20000}, {title: 'headphone', price: 10000}]),
+        new Client(6, 'mila', 'milyk', 'mila@gmail.com', '+380443334455', [{title: 'tv', price: 13000},
+            {title: 'phone', price: 40000}, {title: 'radio', price: 20000}, {title: 'headphone', price: 10000}]),
+        new Client(7, 'misha', 'mishyk', 'misha@gmail.com', '+380443335588', [{title: 'tv', price: 13000},
+            {title: 'phone', price: 40000}, {title: 'radio', price: 20000}, {title: 'headphone', price: 10000}]),
+        new Client(8, 'igor', 'igoryk', 'igor@gmail.com', '+380443335555', [{title: 'tv', price: 13000},
+            {title: 'phone', price: 40000}, {title: 'radio', price: 20000}, {title: 'headphone', price: 10000}]),
+        new Client(9, 'taras', 'taraskin', 'taras@gmail.com', '+380441112233', [{title: 'tv', price: 13000},
+            {title: 'phone', price: 40000}, {title: 'radio', price: 20000}, {title: 'headphone', price: 10000}]),
+        new Client(10, 'ruslan', 'ruslik', 'ruslan@gmail.com', '+380443335599', [{title: 'tv', price: 13000},
+            {title: 'phone', price: 40000}, {title: 'radio', price: 20000}, {title: 'headphone', price: 10000}])
+    ];
+
+    clients.forEach(client => {
+        console.log(`id: ${client.id}, name: ${client.name}, surname: ${client.surname}, email: ${client.email}`);
+        console.log(client.order);
+    });
+
+</script>
+</body>
+</html>
