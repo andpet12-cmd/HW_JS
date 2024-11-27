@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>sessionList</title>
+</head>
+<body>
+<script>
+
+	let sessionsList = [];
+	if (localStorage.getItem('sessionsList')) {
+		sessionsList = JSON.parse(localStorage.getItem('sessionsList')) || [];
+		localStorage.setItem('sessionsList', JSON.stringify(sessionsList));
+	}
+	sessionsList.push(new Date());
+	const sessionsListElement = () => {
+		const div = document.createElement('div');
+		div.innerText = new Date(sessionsListElement).toLocaleString();
+
+		document.body.appendChild(div);
+	}
+
+
+
+</script>
+</body>
+</html>

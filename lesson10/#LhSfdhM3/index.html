@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+< <h2>sessionsList</h2>
+<script>
+    let sessionsList = [];
+    if (localStorage.getItem('sessionsList')) {
+       const sessionsList = JSON.parse(localStorage.getItem('sessionsList'));
+        localStorage.setItem('sessionsList', JSON.stringify(sessionsList));
+        const sessionsInfo = {
+            // date: new Date().toLocaleString(h2)
+        };
+        sessionsList.push(new Date());
+        const h2 = document.createElement('h2');
+        h2.innerText = new Date(sessionsListElement.toLocaleString());
+        localStorage.setItem('sessionsList', JSON.stringify(sessionsInfo));
+        document.body.appendChild(h2);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<div id = "text">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab adipisci cumque error expedita hic iste quam quidem
+	quo unde! Aliquam, eius facere libero maxime odit qui saepe. Molestiae, rem?
+</div>
+
+<button id="btn">hide</button>
+
+<script>
+
+const buttons = document.getElementsByTagName('button');
+const button = buttons[0];
+
+button.onclick = function () {
+	const div = document.getElementById('text');
+	div.style.display = 'none';
+};
+
+</script>
+</body>
+</html>

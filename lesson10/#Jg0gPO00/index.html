@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="xxx">
+<div id="result"></div>
+<script>
+
+    const input = document.getElementById('xxx');
+    const resultDiv = document.getElementById('result');
+    input.oninput = function () {
+        resultDiv.innerText = +this.value * 2.2;
+    };
+
+</script>
+</body>
+</html>

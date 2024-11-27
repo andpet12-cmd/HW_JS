@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<h2>Перевірка віку:</h2>
+
+<input type = "number" id = "age" name = "Вік">
+<button id = "checkButton">Перевірити вік</button>
+
+<script>
+
+	const checkButton = document.getElementById('checkButton');
+	const ageInput = document.getElementById('age');
+
+	checkButton.addEventListener("click", function () {
+		const ageValue = parseInt(ageInput.value);
+
+		if (ageValue <= 0) {
+			alert('Введіть коректний вік');
+		} else if (ageValue < 18) {
+			alert('Вам менше ніж 18 років');
+		} else {
+			alert('Вітаємо! Перевірку пройдено');
+		}
+	});
+
+</script>
+</body>
+</html>
