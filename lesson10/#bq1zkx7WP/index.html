@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="target">100грн</div>
+
+<script>
+
+    const sessionStorage = +localStorage.getItem('sessionStorage');
+    const currentTime = Date.now();
+
+    if (currentTime - sessionStorage >= 10000) {
+
+        let currentNumber = +localStorage.getItem('number') || 100;
+        currentNumber += 10;
+        localStorage.setItem('number', currentNumber);
+
+        document.getElementById('target').innerText = currentNumber + 'грн';
+    }
+
+    localStorage.setItem('sessionStorage', currentTime);
+
+</script>
+</body>
+</html>

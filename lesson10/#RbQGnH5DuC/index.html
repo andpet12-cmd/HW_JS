@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<!--Чому в мене цей код не працює, не можу знайти помилку-->
+<!--Не можу зрозуміти чому в мене цей код не працює, не можу знайти помилку-->
 
 <!--#RbQGnH5DuC-->
 
@@ -17,12 +17,9 @@
 <script>
 
     function addToLocalStorage(arrayName, objToAdd) {
-        const lsItem = localStorage.getItem(arrayName);
-        if (!lsItem) {
-            throw new Error('there is no such array');
-        }
-
+        const lsItem = localStorage.getItem(arrayName) || '[1]';
         const array = JSON.parse(lsItem);
+        // console.log(array);
         if (typeof objToAdd === 'object') {
             array.push(objToAdd);
         }
